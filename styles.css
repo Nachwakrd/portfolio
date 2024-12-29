@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #102016;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  .slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+    padding-top: 20px; /* เพิ่มระยะห่างด้านบนเล็กน้อย */
+  }
+  
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .image-container {
+    width: 100%;
+    padding-top: 100%; /* สร้าง aspect ratio 1:1 */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3); /* เพิ่มพื้นหลังให้ปุ่มเพื่อให้มองเห็นได้ชัดเจนขึ้น */
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  
+ 
+  
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .attractions {
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.attraction-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.attraction-item {
+    width: 48%;
+    background-color: #c2d6cd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.image-gallery img {
+    width: 32%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.attraction-item h3 {
+    margin-top: 0;
+    color: #111c15;
+}
+
+.attraction-item p {
+    color: #35493c;
+    line-height: 1.6;
+}
+
+.attraction-item a {
+    color: #35493c;
+    line-height: 1.6;
+}
+
+.attraction-item a:hover {
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .attraction-row {
+        flex-direction: column;
+    }
+
+    .attraction-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0077b5;
+}
+
+.social-link img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    color: #666;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+  
